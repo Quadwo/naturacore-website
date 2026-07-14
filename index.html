@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaturaCore Ventures Ltd | Agro Tech & Innovation</title>
+    <style>
+        /* Base Styles & Root Variables */
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #e8f5e9;
+            --dark-text: #333333;
+            --light-text: #ffffff;
+            --accent: #fbc02d;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--light-text);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.9)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--light-text);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--dark-text);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #f9a825;
+        }
+
+        /* Focus Areas Section */
+        .focus-section {
+            padding: 60px 5%;
+            background-color: var(--light-green);
+            text-align: center;
+        }
+
+        .focus-section h2 {
+            color: var(--primary-green);
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-text);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: var(--light-text);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">NaturaCore Ventures</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#focus">Our Focus</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Cultivating the Future of Agriculture</h1>
+        <p>At NaturaCore Ventures Ltd, we bridge the gap between nature and technology to drive sustainable agro-innovation and empower the next generation of agro-entrepreneurs.</p>
+        <a href="#contact" class="btn">Partner With Us</a>
+    </header>
+
+    <section id="focus" class="focus-section">
+        <h2>Our Core Pillars</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Agro Tech</h3>
+                <p>Leveraging cutting-edge technology and data-driven solutions to optimize crop yields, improve resource management, and modernize farming infrastructure.</p>
+            </div>
+            <div class="card">
+                <h3>Agro Innovation</h3>
+                <p>Researching and developing sustainable farming practices that adapt to climate change, ensuring food security for tomorrow while protecting the soil today.</p>
+            </div>
+            <div class="card">
+                <h3>Agro Entrepreneurship</h3>
+                <p>Incubating ideas and providing pathways for farmers and innovators to build profitable, scalable agribusinesses in local and global markets.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p><strong>NaturaCore Ventures Ltd</strong></p>
+        <p>Email: contact@naturacoreventures.com | Phone: +1 (555) 123-4567</p>
+        <p>&copy; 2026 NaturaCore Ventures Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
