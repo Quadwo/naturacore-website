@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NaturaCore Ventures Ltd | Agro Tech & Innovation</title>
+    <title>NaturaCore Ventures | Integrated Rural Livelihoods Transformation</title>
     <style>
         /* Base Styles & Root Variables */
         :root {
@@ -12,6 +12,7 @@
             --dark-text: #333333;
             --light-text: #ffffff;
             --accent: #fbc02d;
+            --gray-bg: #f9f9f9;
         }
 
         body, html {
@@ -42,7 +43,7 @@
         }
 
         .logo img {
-            height: 50px; /* Adjust height as needed for visibility in the navbar */
+            height: 50px; 
             width: auto;
             vertical-align: middle;
         }
@@ -61,20 +62,21 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.9)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(rgba(46, 125, 50, 0.85), rgba(46, 125, 50, 0.9)), url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             color: var(--light-text);
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
+            line-height: 1.2;
         }
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 30px auto;
         }
 
@@ -86,23 +88,37 @@
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s;
+            display: inline-block;
+            margin-top: 10px;
         }
 
         .btn:hover {
             background-color: #f9a825;
         }
 
-        /* Focus Areas Section */
-        .focus-section {
-            padding: 60px 5%;
-            background-color: var(--light-green);
-            text-align: center;
+        /* Standard Section Formatting */
+        .section-container {
+            padding: 80px 5%;
         }
 
-        .focus-section h2 {
+        .section-title {
             color: var(--primary-green);
-            margin-bottom: 40px;
-            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* The Model Grid (Circular Harvest) */
+        .bg-light {
+            background-color: var(--light-green);
         }
 
         .grid {
@@ -116,19 +132,45 @@
             background: var(--light-text);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             flex: 1;
             min-width: 250px;
-            max-width: 350px;
-            transition: transform 0.3s;
+            max-width: 280px; /* Adjusted for 4 cards */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-green);
         }
 
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
         }
 
         .card h3 {
             color: var(--primary-green);
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        /* Community & Health Section */
+        .split-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .text-block {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .text-block h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
         /* Footer */
@@ -136,7 +178,25 @@
             background-color: var(--dark-text);
             color: var(--light-text);
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+        }
+
+        footer .tagline {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simple mobile hide for now, can be expanded to a hamburger menu later */
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
@@ -147,40 +207,60 @@
             <img src="logo.png" alt="NaturaCore Ventures Logo">
         </a>
         <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#focus">Our Focus</a>
+            <a href="#model">Our Model</a>
+            <a href="#impact">Community & Health</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
-        <h1>Cultivating the Future of Agriculture</h1>
-        <p>At NaturaCore Ventures Ltd, we bridge the gap between nature and technology to drive sustainable agro-innovation and empower the next generation of agro-entrepreneurs.</p>
+        <h1>Integrated Rural Livelihoods Transformation</h1>
+        <p>NaturaCore Ventures is a pioneering, vertically integrated agribusiness dedicated to driving sustainable industrialization and food security across Ghana. We operate at the intersection of large-scale commercial production and community-anchored development.</p>
         <a href="#contact" class="btn">Partner With Us</a>
     </header>
 
-    <section id="focus" class="focus-section">
-        <h2>Our Core Pillars</h2>
+    <section id="model" class="section-container bg-light">
+        <h2 class="section-title">Our Model: The Circular Harvest</h2>
+        <p class="section-subtitle">We do not just produce food; we build self-sustaining ecosystems. Our business model eliminates the systemic vulnerabilities of the agricultural supply chain by controlling every link—from the soil to the supermarket shelf.</p>
+        
         <div class="grid">
             <div class="card">
-                <h3>Agro Tech</h3>
-                <p>Leveraging cutting-edge technology and data-driven solutions to optimize crop yields, improve resource management, and modernize farming infrastructure.</p>
+                <h3>Mega-Scale Production</h3>
+                <p>With a 100,000-acre land bank, we utilize high-efficiency, technology-driven agronomy to cultivate high-quality maize, soybeans, and sorghum.</p>
             </div>
             <div class="card">
-                <h3>Agro Innovation</h3>
-                <p>Researching and developing sustainable farming practices that adapt to climate change, ensuring food security for tomorrow while protecting the soil today.</p>
+                <h3>Precision Milling & Feed</h3>
+                <p>We convert our grain harvest into premium, precision-formulated animal feed through our state-of-the-art milling operations, providing a stable foundation for regional farmers.</p>
             </div>
             <div class="card">
-                <h3>Agro Entrepreneurship</h3>
-                <p>Incubating ideas and providing pathways for farmers and innovators to build profitable, scalable agribusinesses in local and global markets.</p>
+                <h3>Biological Poultry</h3>
+                <p>Leveraging our own high-protein feed, we produce robust table eggs and premium poultry while converting manure into high-value organic fertilizer for our fields.</p>
+            </div>
+            <div class="card">
+                <h3>FMCG Value Addition</h3>
+                <p>Through our brand, we bridge the gap between wholesale and retail, providing consumers with fresh, traceable meat products that replace imported alternatives.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="section-container">
+        <h2 class="section-title">More Than an Agribusiness</h2>
+        <div class="split-content">
+            <div class="text-block">
+                <h3>Our Commitment to Community</h3>
+                <p>NaturaCore Ventures is built on the philosophy of <strong>"sincerity, real results, and win-win cooperation"</strong>. We serve as a community-anchored asset. Our operations create stable employment, provide youth apprenticeships with a focus on women’s empowerment, and integrate indigenous outgrower farmers through fair, transparent partnership contracts.</p>
+            </div>
+            <div class="text-block">
+                <h3>Delivering Health & Security</h3>
+                <p>We recognize that true prosperity is impossible without a healthy population. NaturaCore integrates agribusiness logistics with community health services. By leveraging our distribution network, we support mobile clinics, maternal and child health programs, and local school feeding initiatives, effectively tackling the cycle of rural poverty and child malnutrition through reliable access to locally produced protein.</p>
             </div>
         </div>
     </section>
 
     <footer id="contact">
+        <p class="tagline">"From our farm to your fork—fresh, traceable, zero waste."</p>
         <p><strong>NaturaCore Ventures Ltd</strong></p>
-        <p>Email: contact@naturacoreventures.com | Phone: +1 (555) 123-4567</p>
-        <p>&copy; 2026 NaturaCore Ventures Ltd. All Rights Reserved.</p>
+        <p>Email: contact@naturacoreventures.com | Phone: +1 (555) 123-4567</p> <p>&copy; 2026 NaturaCore Ventures Ltd. All Rights Reserved.</p>
     </footer>
 
 </body>
